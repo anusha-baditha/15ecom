@@ -15,7 +15,7 @@ app=Flask(__name__)
 app.config['SESSION_TYPE']='filesystem'
 RAZORPAY_KEY_ID='rzp_test_RXy19zNlFo9p8F'
 RAZORPAY_KEY_SECRET='eIHxmEyJqhKz2l0tHEy7KkkC'
-client=razorpay.Client(auth=(RAZORPAY_KEY_ID,RAZORPAY_KEY_SECRET))
+#client=razorpay.Client(auth=(RAZORPAY_KEY_ID,RAZORPAY_KEY_SECRET))
 app.sceret_key=b'Z\x05L\x1eZ'
 Session(app)
 #mydb=mysql.connector.connect(host='localhost',user='root',password='admin',db='major')
