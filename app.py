@@ -9,7 +9,7 @@ from mysql.connector import (connection)
 import os
 import re
 import pdfkit
-import razorpay
+#import razorpay
 app=Flask(__name__)
 #config=pdfkit.configuration(wkhtmltopdf=r'D:\wkhtmltopdf\bin\wkhtmltopdf.exe')
 app.config['SESSION_TYPE']='filesystem'
@@ -430,7 +430,7 @@ def readreview(itemid):
     data=list(data1)+data2
     print(data)
     return render_template('description.html',data=data,data2=data2)
-@app.route('/pay/<itemid>/<name>/<int:price>',methods=['GET','POST'])
+'''@app.route('/pay/<itemid>/<name>/<int:price>',methods=['GET','POST'])
 def pay(itemid,name,price):
     if session.get('user'):
         try:
@@ -480,7 +480,7 @@ def success():
         return redirect(url_for('orders'))
     except Exception as e:
         print(e)
-        return f'{e}',400
+        return f'{e}',400'''
 @app.route('/orders')
 def orders():
     if session.get('user'):
